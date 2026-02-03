@@ -230,23 +230,9 @@ function initMap() {
   info = new google.maps.InfoWindow();
   render(spots);
 }
-
-function renderStars(level) {
-  return "★".repeat(level) + "☆".repeat(5 - level);
-}
   
 function render(data) {
   document.getElementById("list").innerHTML = "";
-
-  const stars = renderStars(spot.level);
-
-infoWindow.setContent(`
-  <div style="color:black">
-    <h3>${spot.name}</h3>
-    <p><strong>怖さレベル：</strong>${stars}</p>
-    <p>${spot.desc}</p>
-  </div>
-`);
 
 
   data.forEach(s => {
