@@ -241,6 +241,20 @@ function render(data) {
       title:s.name
     });
 
+    const stars = renderStars(spot.level);
+
+infoWindow.setContent(`
+  <div style="color:black">
+    <h3>${spot.name}</h3>
+    <p><strong>怖さレベル：</strong>${stars}</p>
+    <p>${spot.desc}</p>
+  </div>
+`);
+
+    function renderStars(level) {
+  return "★".repeat(level) + "☆".repeat(5 - level);
+}
+
     m.addListener("click", () => {
       info.setContent(`
         <div style="max-width:220px; color:#000;">
