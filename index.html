@@ -76,7 +76,7 @@ const spots = [
     lat: 33.2766,
     lng: 134.1692,
     level: 5,
-    img: "https://upload.wikimedia.org/wikipedia/commons/e/ef/%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%AC%E3%82%B9%E3%83%88%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%80%E3%82%8D%E3%81%A8_-_panoramio.jpg",
+    img: "https://www.departure-ruins.com/wp‐content/uploads/2021/12/image-132.jpeg",
     desc: "深夜に人影が出ると噂される廃施設。"
   },
   {
@@ -84,7 +84,7 @@ const spots = [
     lat: 32.7816,
     lng: 132.9552,
     level: 3,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Cape_Ashizuri_-_%E8%B6%B3%E6%91%BA%E5%B2%AC_-_panoramio.jpg/640px-Cape_Ashizuri_-_%E8%B6%B3%E6%91%BA%E5%B2%AC_-_panoramio.jpg",
+    img: "https:://i1.wp.com/0ccult.online/wp-content/uploads/2019/10/ashizuri.jpg?fit=1024%2C612&ssl=1",
     desc: "灯台周辺で怪異の目撃談が多い。"
   },
   {
@@ -108,7 +108,7 @@ const spots = [
     lat: 33.5048,
     lng: 133.5857,
     level: 3,
-    img: "https://sinreikousatu.jp/wp-content/uploads/2025/02/%E8%97%A4%E5%AE%AE%E7%A5%9E%E7%A4%BE%E3%81%AE%E5%A4%96%E8%A6%B3.jpg",
+    img: "https://tse4.mm.bing.net/th/id/OIP.OAkskAMlrnvNlt5Zj4nCigHaEn?rs=1&pid=ImgDetMain&o=7&rm=3",
     desc: "夜に足音が聞こえると噂される。"
   },
   {
@@ -124,7 +124,7 @@ const spots = [
     lat: 33.5043,
     lng: 133.5694,
     level: 5,
-    img: "https://haikyo.info/image_spot/11524/31eeef49592727db0be1375ba6eca9ae.JPG",
+    img: "https://ghostmap.jp/img/spot/display/20240927113359753.jpeg",
     desc: "住民の霊が出ると言われる。"
   },
   {
@@ -132,7 +132,7 @@ const spots = [
     lat: 33.2763,
     lng: 134.1724,
     level: 3,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Murotomisaki20220510_4.jpg/640px-Murotomisaki20220510_4.jpg",
+    img: "https://muroto.inakamap.jp/storage/nature/0004_01.png",
     desc: "霧の日に異様な声が聞こえるという。"
   },
   {
@@ -140,7 +140,7 @@ const spots = [
     lat: 33.5475,
     lng: 133.5619,
     level: 4,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%E6%B5%A6%E6%88%B8%E5%A4%A7%E6%A9%8B_-_panoramio.jpg/640px-%E6%B5%A6%E6%88%B8%E5%A4%A7%E6%A9%8B_-_panoramio.jpg",
+    img: "https://ghostmap.jp/img/spot/display/20180711065312307.jpg",
     desc: "夜中に人影が現れるとの噂。"
   },
   {
@@ -156,7 +156,7 @@ const spots = [
     lat: 33.5794,
     lng: 133.4912,
     level: 3,
-    img: "https://haikyo.info/image_spot/1197/202305.jpg",
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg",
     desc: "不審な影が目撃される。"
   },
   {
@@ -164,7 +164,7 @@ const spots = [
     lat: 33.5437,
     lng: 133.5310,
     level: 2,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hitsuzan_park01s3872.jpg/640px-Hitsuzan_park01s3872.jpg",
+    img: "https://ghostmap.jp/img/spot/display/20180714151535948.jpg",
     desc: "夜景スポットだが心霊話も多い。"
   },
   {
@@ -180,7 +180,7 @@ const spots = [
     lat: 33.7111,
     lng: 133.3268,
     level: 5,
-    img: "https://haikyo.info/image_spot/36/36.jpg",
+    img: "https://cdn.snsimg.carview.co.jp/minkara/spot/000/000/543/826/543826/543826.jpg?ct=57d71fde4794",
     desc: "廃墟に霊が集まるとされる。"
   },
   {
@@ -204,7 +204,7 @@ const spots = [
     lat: 33.5668,
     lng: 133.4864,
     level: 5,
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Syatou_sanpou_20231124_1.jpg/640px-Syatou_sanpou_20231124_1.jpg",
+    img: "https://www.departure-ruins.com/wp-content/uploads/2022/02/bc46a2a2409598d1fe8d8bd71d909058_51181c69cd1a0c99197b4e4819223194.jpg",
     desc: "廃ホテルとして特に有名。"
   },
   {
@@ -230,10 +230,9 @@ function initMap() {
   info = new google.maps.InfoWindow();
   render(spots);
 }
-  
+
 function render(data) {
   document.getElementById("list").innerHTML = "";
-
 
   data.forEach(s => {
     const m = new google.maps.Marker({
@@ -259,10 +258,7 @@ function render(data) {
     d.onclick=()=>{ map.setCenter({lat:s.lat,lng:s.lng}); map.setZoom(14); };
     document.getElementById("list").appendChild(d);
   });
-
 }
-
-
 
 document.getElementById("search").addEventListener("input",e=>{
   const v=e.target.value;
@@ -273,4 +269,3 @@ document.getElementById("search").addEventListener("input",e=>{
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtTpdJxOJUIXhUsYYSC8QmIZ93LeieB0w&callback=initMap" async defer></script>
 </body>
 </html>
-
